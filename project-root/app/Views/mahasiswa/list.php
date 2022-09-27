@@ -1,5 +1,7 @@
+<?= $this->extend('template')?>
+<?= $this->section('content')?>
 <div class='p-5'>
-<a href="/create" type="button" class="btn btn-dark mb-3">Create</a>
+<a href="/create" type="button" class="btn btn-dark mb-3"><i class="fa fa-plus"></i>Create</a>
 <table class="table table-striped table-dark">
   <thead>
     <tr>
@@ -23,7 +25,7 @@
           <a class="btn btn-warning mr-3" href="/edit/<?=$mhs['id'] ?>">Edit</a>
           <form action="/delete/<?= $mhs['id'] ?>" method="post">
             <input hidden name="_method" value="DELETE" type="hidden">
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</button>
           </form>
         </div>
       </td>
@@ -31,3 +33,4 @@
     <?php $no++; endforeach; ?>
   </tbody>
 </table>
+<?= $this->endSection()?>
